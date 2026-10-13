@@ -1,0 +1,88 @@
+
+package futbol;
+
+public class Defensa {
+
+    private String nombre;
+    private int dorsal;
+    private int entradasExitosas;
+    private int intercepciones;
+    private double fuerza;
+
+    // Constructor sin parámetros
+    public Defensa() {
+        nombre = "Sin nombre";
+        dorsal = 4;
+        entradasExitosas = 0;
+        intercepciones = 0;
+        fuerza = 80.0;
+    }
+
+    // Constructor con parámetros
+    public Defensa(String nombre, int dorsal,
+                   int entradasExitosas, int intercepciones,
+                   double fuerza) {
+        this.nombre = nombre;
+        this.dorsal = dorsal;
+        this.entradasExitosas = entradasExitosas;
+        this.intercepciones = intercepciones;
+        this.fuerza = fuerza;
+    }
+
+    // Getters y setters
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getDorsal() { return dorsal; }
+    public void setDorsal(int dorsal) {
+        this.dorsal = dorsal;
+    }
+
+    public int getEntradasExitosas() {
+        return entradasExitosas;
+    }
+    public void setEntradasExitosas(int entradasExitosas) {
+        this.entradasExitosas = entradasExitosas;
+    }
+
+    public int getIntercepciones() { return intercepciones; }
+    public void setIntercepciones(int intercepciones) {
+        this.intercepciones = intercepciones;
+    }
+
+    public double getFuerza() { return fuerza; }
+    public void setFuerza(double fuerza) {
+        this.fuerza = fuerza;
+    }
+
+    // Cinco métodos propios
+    public void interceptarPase() {
+        intercepciones++;
+        System.out.println(nombre + " intercepta un pase.");
+    }
+
+    public void realizarEntrada() {
+        entradasExitosas++;
+        System.out.println(nombre + " realiza una entrada.");
+    }
+
+    public void bloquearTiro() {
+        System.out.println(nombre + " bloquea un disparo.");
+    }
+
+    public void despejarBalon() {
+        System.out.println(nombre + " despeja el balón.");
+    }
+
+    public void marcarRival() {
+        System.out.println(nombre + " marca a un rival.");
+    }
+
+    // Sobrecarga de método
+    public void despejarBalon(String direccion) {
+        System.out.println(nombre + " despeja el balón hacia "
+                + direccion);
+    }
+}

@@ -1,0 +1,58 @@
+
+package futbol;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        // Dos delanteros
+        Delantero delantero1 = new Delantero(
+                "Mateo Rojas", 9, 18, 34.5, "Izquierda");
+
+        Delantero delantero2 = new Delantero();
+
+        // Dos mediocampistas
+        Mediocampista medio1 = new Mediocampista(
+                "Daniel Torres", 8, 12, 850, 92.0);
+
+        Mediocampista medio2 = new Mediocampista();
+
+        // Dos defensas
+        Defensa defensa1 = new Defensa(
+                "Santiago Castro", 4, 25, 30, 88.0);
+
+        Defensa defensa2 = new Defensa();
+
+        // Imprimir dos atributos de cada objeto
+        System.out.println("=== DELANTEROS ===");
+        System.out.println(delantero1.getNombre()
+                + " - Goles: " + delantero1.getGoles());
+        System.out.println(delantero2.getNombre()
+                + " - Dorsal: " + delantero2.getDorsal());
+
+        System.out.println("\n=== MEDIOCAMPISTAS ===");
+        System.out.println(medio1.getNombre()
+                + " - Asistencias: " + medio1.getAsistencias());
+        System.out.println(medio2.getNombre()
+                + " - Dorsal: " + medio2.getDorsal());
+
+        System.out.println("\n=== DEFENSAS ===");
+        System.out.println(defensa1.getNombre()
+                + " - Intercepciones: "
+                + defensa1.getIntercepciones());
+        System.out.println(defensa2.getNombre()
+                + " - Dorsal: " + defensa2.getDorsal());
+
+        // Probar los métodos y sus sobrecargas
+        System.out.println("\n=== ACCIONES DE LOS JUGADORES ===");
+
+        delantero1.marcarGol();
+        delantero1.rematar("volea");
+
+        medio1.darAsistencia();
+        medio1.realizarPase("filtrado");
+
+        defensa1.interceptarPase();
+        defensa1.despejarBalon("la banda izquierda");
+    }
+}

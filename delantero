@@ -1,0 +1,84 @@
+package futbol;
+
+public class Delantero {
+
+    private String nombre;
+    private int dorsal;
+    private int goles;
+    private double velocidad;
+    private String piernaDominante;
+
+    // Constructor sin parámetros
+    public Delantero() {
+        nombre = "Sin nombre";
+        dorsal = 9;
+        goles = 0;
+        velocidad = 30.0;
+        piernaDominante = "Derecha";
+    }
+
+    // Constructor con parámetros
+    public Delantero(String nombre, int dorsal, int goles,
+                     double velocidad, String piernaDominante) {
+        this.nombre = nombre;
+        this.dorsal = dorsal;
+        this.goles = goles;
+        this.velocidad = velocidad;
+        this.piernaDominante = piernaDominante;
+    }
+
+    // Getters y setters
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getDorsal() { return dorsal; }
+    public void setDorsal(int dorsal) {
+        this.dorsal = dorsal;
+    }
+
+    public int getGoles() { return goles; }
+    public void setGoles(int goles) {
+        this.goles = goles;
+    }
+
+    public double getVelocidad() { return velocidad; }
+    public void setVelocidad(double velocidad) {
+        this.velocidad = velocidad;
+    }
+
+    public String getPiernaDominante() {
+        return piernaDominante;
+    }
+    public void setPiernaDominante(String piernaDominante) {
+        this.piernaDominante = piernaDominante;
+    }
+
+    // Cinco métodos propios
+    public void marcarGol() {
+        goles++;
+        System.out.println(nombre + " ha marcado un gol.");
+    }
+
+    public void rematar() {
+        System.out.println(nombre + " remata al arco.");
+    }
+
+    public void desmarcarse() {
+        System.out.println(nombre + " busca espacio.");
+    }
+
+    public void presionarPortero() {
+        System.out.println(nombre + " presiona la salida rival.");
+    }
+
+    public void mostrarEstadisticas() {
+        System.out.println(nombre + " - Goles: " + goles);
+    }
+
+    // Sobrecarga de método
+    public void rematar(String tipo) {
+        System.out.println(nombre + " realiza un remate de " + tipo);
+    }
+}

@@ -1,0 +1,88 @@
+
+package futbol;
+
+public class Mediocampista {
+
+    private String nombre;
+    private int dorsal;
+    private int asistencias;
+    private int pasesCompletados;
+    private double resistencia;
+
+    // Constructor sin parámetros
+    public Mediocampista() {
+        nombre = "Sin nombre";
+        dorsal = 8;
+        asistencias = 0;
+        pasesCompletados = 0;
+        resistencia = 85.0;
+    }
+
+    // Constructor con parámetros
+    public Mediocampista(String nombre, int dorsal,
+                         int asistencias, int pasesCompletados,
+                         double resistencia) {
+        this.nombre = nombre;
+        this.dorsal = dorsal;
+        this.asistencias = asistencias;
+        this.pasesCompletados = pasesCompletados;
+        this.resistencia = resistencia;
+    }
+
+    // Getters y setters
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getDorsal() { return dorsal; }
+    public void setDorsal(int dorsal) {
+        this.dorsal = dorsal;
+    }
+
+    public int getAsistencias() { return asistencias; }
+    public void setAsistencias(int asistencias) {
+        this.asistencias = asistencias;
+    }
+
+    public int getPasesCompletados() {
+        return pasesCompletados;
+    }
+    public void setPasesCompletados(int pasesCompletados) {
+        this.pasesCompletados = pasesCompletados;
+    }
+
+    public double getResistencia() { return resistencia; }
+    public void setResistencia(double resistencia) {
+        this.resistencia = resistencia;
+    }
+
+    // Cinco métodos propios
+    public void darAsistencia() {
+        asistencias++;
+        System.out.println(nombre + " da una asistencia.");
+    }
+
+    public void realizarPase() {
+        pasesCompletados++;
+        System.out.println(nombre + " completa un pase.");
+    }
+
+    public void cambiarFrente() {
+        System.out.println(nombre + " cambia el juego de banda.");
+    }
+
+    public void recuperarBalon() {
+        System.out.println(nombre + " recupera el balón.");
+    }
+
+    public void organizarAtaque() {
+        System.out.println(nombre + " organiza el ataque.");
+    }
+
+    // Sobrecarga de método
+    public void realizarPase(String tipo) {
+        pasesCompletados++;
+        System.out.println(nombre + " realiza un pase " + tipo);
+    }
+}
